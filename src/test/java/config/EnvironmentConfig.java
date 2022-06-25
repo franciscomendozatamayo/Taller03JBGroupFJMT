@@ -2,8 +2,8 @@ package config;
 
 public class EnvironmentConfig {
 
-    public static String host= "https://todoist.com/";
-    public static String user="franciscomendozatamayo@gmail.com";
-    public static String pwd="#F180918m";
+    public static String host= ReadConfig.getInstance().getHost();
+    public static String user=ReadConfig.getInstance().getUser();
+    public static String pwd=ReadConfig.getInstance().getPwd();
 
 }//end EnviromentConfig

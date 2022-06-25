@@ -1,5 +1,6 @@
 package singletonSession;
 
+import config.ReadConfig;
 import factoryBrowser.FactoryBrowser;
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +12,7 @@ public class Session {
 
     // constructor privado
     private Session(){
-        driver= FactoryBrowser.make("proxy").create();
+        driver= FactoryBrowser.make(ReadConfig.getInstance().getBrowser()).create();
     }
 
     // metodo estatico publico para retornar la sesion unica

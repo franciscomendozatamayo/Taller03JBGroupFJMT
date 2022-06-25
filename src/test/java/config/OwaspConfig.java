@@ -3,9 +3,9 @@ package config;
 public class OwaspConfig {
 
     // host/port
-    public static String protocol="http://";
-    public static String host="127.0.0.1";
-    public static String port="8888";
+    public static String protocol=ReadConfig.getInstance().getOwaspProtocol();
+    public static String host=ReadConfig.getInstance().getHost();
+    public static String port=ReadConfig.getInstance().getOwaspPort();
 
     // api
     public static final String START_SCANNING=protocol+host+":"+port+"/JSON/ascan/action/scan/?url=";

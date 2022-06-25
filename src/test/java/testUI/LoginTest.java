@@ -1,7 +1,10 @@
 package testUI;
 
 import config.EnvironmentConfig;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import pages.LoginModal;
 import pages.MainPage;
@@ -13,6 +16,15 @@ public class LoginTest extends TestBase{
     LoginModal loginModal = new LoginModal();
     MenuSection menuSection= new MenuSection();
 
+    @DisplayName("Verify the login successfully")
+    @Owner("JBGroup")
+    @Epic("Authentication")
+    @Feature("Login")
+    @Description("this test is to verify the login successfully using valid credentials")
+    @Link("JIRA00001")
+    @Issue("BUG00001")
+    @Story("55555")
+    @Order(1)
     @Test
     public void verifyLoginTest(){
         mainPage.loginButton.click();
